@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rvMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="326dp"
+        android:layout_above="@+id/idLayoutDown"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/planetearth"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingBottom="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/ivCohete2"
+                android:layout_width="67dp"
+                android:layout_height="67dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|left"
+                android:paddingBottom="20dp"
+                android:src="@drawable/rocketlogo"
+
+                app:civ_border_color="#EEE"
+                app:civ_border_width="0dp"
+                app:civ_shadow="true"
+                app:civ_shadow_color="#FFF"
+                app:civ_shadow_radius="0" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/AuthTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/idLayoutDown"
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="false"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/myswipe"
+            android:layout_width="371dp"
+            android:layout_height="258dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" say all this, yet supposedly I'm one of the &quot;good guys&quot;: I teach small classes where we mostly sit in circles and discuss current events and view wacky-but-insightful websites and interrogate visual literacy and collaborate with community organizations doing field work and hands-on curatorial work and writing and arts-integrated experimental learning . . . yadda yadda yadda . . . . Like I said, my classroom is not the sort directly critiqued by the video.  And yet . . . And yet I just spent 3 hours reading a book on metaphor theory--a densely written, scholarly text with almost no pictures. I had to retrain my brain to concentrate on the writing, sometimes reading passages to my slumbering dog and using colored pencils to sketch out the complex ideas unfolding in the text. And it was glorious." />
+                </LinearLayout>
+            </ScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLeave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/left_button"
+                android:shadowColor="@color/colorAccent"
+                android:text="Leave" />
+
+            <Button
+                android:id="@+id/btnStay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1FA1F8"
+                android:text="Stay" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
